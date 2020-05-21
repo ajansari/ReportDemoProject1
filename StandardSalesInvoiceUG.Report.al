@@ -1,8 +1,8 @@
 report 50102 "Standard Sales - Invoice UG"
 {
     RDLCLayout = './StandardSalesInvoiceUG.rdlc';
-    WordLayout = './StandardSalesInvoiceUG.docx';
-    Caption = 'Sales - Invoice';
+    WordLayout = './SalesInvoiceLayoutCustom.docx';
+    Caption = 'Sales - Invoice AJ';
     DefaultLayout = Word;
     EnableHyperlinks = true;
     Permissions = TableData "Sales Shipment Buffer" = rimd;
@@ -419,6 +419,10 @@ report 50102 "Standard Sales - Invoice UG"
             {
             }
             column(CustomerPONumber; "External Document No.")
+            {
+            }
+            //Adding Customer Posting Group Data Item
+            column(CustPostingGroup; "Customer Posting Group")
             {
             }
             dataitem(Line; "Sales Invoice Line")
